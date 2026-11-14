@@ -1,0 +1,66 @@
+{
+  "entities": {
+    "documents": {
+      "title": "Document",
+      "description": "Smart Archive documents for Yadegaran martyrs system",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string" },
+        "category": { "type": "string" },
+        "date": { "type": "string" },
+        "status": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "thumbnail": { "type": "string" },
+        "profileId": { "type": "string" },
+        "description": { "type": "string" },
+        "aiSuggestedProfileName": { "type": "string" },
+        "aiSuggestedProfileId": { "type": "string" },
+        "aiConfidence": { "type": "number" },
+        "aiAnalysis": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "title"]
+    },
+    "profiles": {
+      "title": "Martyr Profile",
+      "description": "Martyr profiles and biographical hero records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "family": { "type": "string" },
+        "fatherName": { "type": "string" },
+        "nationalCode": { "type": "string" },
+        "gender": { "type": "string" },
+        "birthDate": { "type": "string" },
+        "martyrdomDate": { "type": "string" },
+        "province": { "type": "string" },
+        "city": { "type": "string" },
+        "bio": { "type": "string" },
+        "avatar": { "type": "string" },
+        "category": { "type": "string" },
+        "unit": { "type": "string" },
+        "responsibility": { "type": "string" }
+      },
+      "required": ["id", "name", "family"]
+    },
+    "memoirs": {
+      "title": "Memoir",
+      "description": "Memoirs and oral history notes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "profileId": { "type": "string" },
+        "senderName": { "type": "string" },
+        "content": { "type": "string" },
+        "date": { "type": "string" },
+        "type": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "status": { "type": "string" }
+      },
+      "required": ["id", "content"]
+    }
+  }
+}
